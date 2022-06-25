@@ -1,0 +1,60 @@
+(setq inhibit-startup-message t)
+
+;Use 4 spaces instead of tabs:
+(setq indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
+
+;Name of the file is name of the window
+(setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
+
+; Military time
+(display-time)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+
+
+(set-background-color "black")
+(set-foreground-color "white")
+(set-face-background 'mode-line "black")
+(set-face-foreground 'mode-line "white")
+(set-face-foreground 'region "black")
+(set-face-background 'region "white")
+;; Set mouse color
+(set-mouse-color "navy")
+;;; Set highlighting colors for isearch and drag
+(set-face-foreground 'highlight "white")
+(set-face-background 'highlight "blue")
+(set-face-foreground 'region "cyan")
+(set-face-background 'region "blue")
+(set-face-foreground 'secondary-selection "skyblue")
+(set-face-background 'secondary-selection "darkblue")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Custom splitting functions ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun vsplit-last-buffer ()
+  (interactive)
+  (split-window-vertically)
+  (other-window 1 nil)
+  (switch-to-next-buffer)
+  )
+(defun hsplit-last-buffer ()
+  (interactive)
+   (split-window-horizontally)
+  (other-window 1 nil)
+  (switch-to-next-buffer)
+  )
+
+(global-set-key (kbd "C-x 2") 'vsplit-last-buffer)
+(global-set-key (kbd "C-x 3") 'hsplit-last-buffer)
+
+; Window manager
+(global-set-key (kbd "M-J") (lambda () (interactive) (enlarge-window 1)))
+(global-set-key (kbd "M-K") (lambda () (interactive) (enlarge-window -1)))
+(global-set-key (kbd "M-H") (lambda () (interactive) (enlarge-window -1 t)))
+(global-set-key (kbd "M-L") (lambda () (interactive) (enlarge-window 1 t)))
+(global-set-key (kbd "M-j") 'windmove-down)
+(global-set-key (kbd "M-k") 'windmove-up)
+(global-set-key (kbd "M-h") 'windmove-left)
+(global-set-key (kbd "M-l") 'windmove-right)
