@@ -11,3 +11,6 @@ emacs  --batch --eval '(print (eql 1 1))'
 emacs  --batch --eval "(print (equal '(1 2 3) '(1 2 3)))"
 
 ```
+
+### Emacs lisp interpreter
+M-x ielm ; gives elisp prompt
