@@ -7,6 +7,11 @@
 ;Name of the file is name of the window
 (setq frame-title-format '(buffer-file-name "Emacs: %b (%f)" "Emacs: %b"))
 
+;c-o opens line above current line
+;m-o opens line below current line
+(global-set-key (kbd "C-o") (lambda () (interactive)(beginning-of-line)(open-line 1)))
+(global-set-key (kbd "M-o") (lambda () (interactive)(end-of-line)(newline)))
+
 ; Military time
 (display-time)
 (setq display-time-24hr-format t)
