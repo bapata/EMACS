@@ -17,6 +17,13 @@
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 
+; theme
+(load-theme 'wheatgrass t)
+
+; Vi mode in emacs
+(setq viper-mode t)
+(require 'viper)
+
 
 (set-background-color "black")
 (set-foreground-color "white")
