@@ -1,2 +1,7 @@
-;; Amazing completion package
+;; amazing package to install
+M-x package-install RET
+vertico
+
+
+;; Amazing completion package - put this in ~/.emacs.d/init.el
 (vertico-mode 1)
