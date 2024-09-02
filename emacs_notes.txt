@@ -7,3 +7,7 @@ vertico
 
 ;; Amazing completion package - put this in ~/.emacs.d/init.el
 (vertico-mode 1)
+
+;; Bind key
+(define-key global-map (kbd "C-S-n") #'my-next-15-lines)
+(define-key global-map (kbd "C-S-p") #'my-previous-15-lines)
