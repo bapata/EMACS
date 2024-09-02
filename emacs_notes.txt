@@ -2,6 +2,8 @@
 M-x package-install RET
 vertico
 
+;; symbols with two hyphen '--' are for private use and 
+;; not advised to use 
 
 ;; Amazing completion package - put this in ~/.emacs.d/init.el
 (vertico-mode 1)
