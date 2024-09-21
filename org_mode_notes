@@ -3,3 +3,12 @@
 #+END_SRC
 
 ;; C-c C-c by placing cursor on the line with BEGIN..
+
+
+#+BEGIN_SRC perl :results output
+  print("Hello perl")
+#+END_SRC
+
+#+BEGIN_SRC ruby :results output
+  puts "Hello ruby"
+#+END_SRC
