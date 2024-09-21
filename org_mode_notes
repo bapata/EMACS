@@ -1,0 +1,5 @@
+#+BEGIN_SRC python :results output
+  print("my current wd")
+#+END_SRC
+
+;; C-c C-c by placing cursor on the line with BEGIN..
